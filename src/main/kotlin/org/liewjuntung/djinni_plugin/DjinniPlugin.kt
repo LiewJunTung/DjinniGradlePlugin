@@ -1,8 +1,7 @@
-package org.pandawarrior.djinni_plugin
+package org.liewjuntung.djinni_plugin
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.tasks.Input
 import org.gradle.kotlin.dsl.createTask
 
 class DjinniPlugin : Plugin<Project> {

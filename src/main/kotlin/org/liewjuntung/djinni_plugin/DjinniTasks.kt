@@ -1,14 +1,12 @@
-package org.pandawarrior.djinni_plugin
+package org.liewjuntung.djinni_plugin
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import djinni.Main
 import org.gradle.api.DefaultTask
-import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import java.io.File
 import java.io.InputStream
 import java.net.URL
-import kotlin.concurrent.thread
 
 open class DjinniPluginExtension {
     var baseDir: String = "build/djinni/generated-src/"

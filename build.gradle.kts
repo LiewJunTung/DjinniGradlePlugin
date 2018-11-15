@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.jvm.tasks.Jar
 
 plugins {
     `java-gradle-plugin`
@@ -7,8 +8,13 @@ plugins {
     `maven-publish`
 }
 
-group = "org.pandawarrior"
-version = "1.0"
+group = "org.liewjuntung"
+version = "1.1"
+
+val extraLib by configurations.creating {
+    configurations["implementation"].extendsFrom(this)
+}
+
 
 pluginBundle {
     website = "https://github.com/LiewJunTung/DjinniGradlePlugin"
@@ -26,8 +32,8 @@ pluginBundle {
 gradlePlugin {
     plugins {
         create("greetingsPlugin") {
-            id = "org.pandawarrior.djinni_plugin"
-            implementationClass = "org.pandawarrior.djinni_plugin.DjinniPlugin"
+            id = "org.liewjuntung.djinni_plugin"
+            implementationClass = "org.liewjuntung.djinni_plugin.DjinniPlugin"
         }
     }
 }
@@ -37,8 +43,14 @@ repositories {
 }
 
 dependencies {
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    extraLib(fileTree("libs/djinni.jar"))
     compileOnly(gradleApi())
     testImplementation("junit", "junit", "4.12")
-    implementation ("com.fasterxml.jackson.core", "jackson-databind", "2.9.7")
+    implementation("com.fasterxml.jackson.core", "jackson-databind", "2.9.7")
+}
+//
+tasks.withType<Jar>() {
+    configurations["extraLib"].forEach { file: File ->
+        from(zipTree(file.absoluteFile))
+    }
 }
