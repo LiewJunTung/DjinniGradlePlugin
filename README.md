@@ -65,3 +65,5 @@ apply plugin: "org.liewjuntung.djinni_plugin"
 ## Usage (downloadSupportFile)
 A task to download the necessary Djinni support files, by default it will save to build/djinni/support
 1. `./gradlew downloadSupportFile`
+
+See also [https://plugins.gradle.org/plugin/org.liewjuntung.djinni_plugin](https://plugins.gradle.org/plugin/org.liewjuntung.djinni_plugin)
