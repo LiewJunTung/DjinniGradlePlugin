@@ -1,6 +1,6 @@
-#Djinni Gradle Plugin
+# Djinni Gradle Plugin
 
-##Installation
+## Installation
 Build script snippet for plugins DSL for Gradle 2.1 and later:
 ```groovy
 // build.gradle
