@@ -66,6 +66,6 @@ apply plugin: "org.liewjuntung.djinni_plugin"
 A task to download the necessary Djinni support files, by default it will save to build/djinni/support
 1. `./gradlew downloadSupportFile`
 
-<img src="img/djinni_support.png">
+<img src="img/djinni_support.png" width="300">
 
 See also [https://plugins.gradle.org/plugin/org.liewjuntung.djinni_plugin](https://plugins.gradle.org/plugin/org.liewjuntung.djinni_plugin)
