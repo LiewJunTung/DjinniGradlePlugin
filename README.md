@@ -1,4 +1,5 @@
 # Djinni Gradle Plugin
+A Gradle plugin to help generate C++ linkage code such as JNI for Java or ObjC++ for Objective C via [Djinni](https://github.com/dropbox/djinni)
 
 ## Installation
 Build script snippet for plugins DSL for Gradle 2.1 and later:
